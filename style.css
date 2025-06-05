@@ -1,0 +1,12 @@
+body{
+    display: flex;
+}
+body > *{
+    margin: 10px;
+}
+
+textarea{
+    resize: none;
+    width: 40vw;
+    height: 100px;
+}

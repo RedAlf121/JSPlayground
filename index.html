@@ -13,13 +13,19 @@
     <script src="main.js" defer></script>
 </head>
 <body>
-    <h3>HTML</h3>
-    <textarea name="html" id="html" oninput="editPreview()"></textarea>
-    <h3>CSS</h3>
-    <textarea name="css" id="css" oninput="editPreview()"></textarea>
-    <h3>Javascript</h3>
-    <textarea name="js" id="js" oninput="editPreview()"></textarea>
-    
-    <iframe class="render" title="Preview"></iframe>
+    <div id="editor">
+        <h3>HTML</h3>
+        <textarea name="html" id="html" oninput="editPreview()"></textarea>
+        <h3>CSS</h3>
+        <textarea name="css" id="css" oninput="editPreview()"></textarea>
+        <h3>Javascript</h3>
+        <textarea name="js" id="js" oninput="editPreview()"></textarea>
+    </div>
+    <div id="output">
+        <h3>Preview</h3>
+        <iframe class="render" title="Preview"></iframe>
+        <h3>Console</h3>
+        <div class="console"></div>
+    </div>
 </body>
 </html>

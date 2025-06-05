@@ -18,4 +18,3 @@ function editPreview(){
     `);
     renderer.close();
 }
-console.log(htmlTextArea)

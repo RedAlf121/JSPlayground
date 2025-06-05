@@ -14,12 +14,18 @@
 </head>
 <body>
     <div id="editor">
-        <h3>HTML</h3>
-        <textarea name="html" id="html" oninput="editPreview()"></textarea>
-        <h3>CSS</h3>
-        <textarea name="css" id="css" oninput="editPreview()"></textarea>
-        <h3>Javascript</h3>
-        <textarea name="js" id="js" oninput="editPreview()"></textarea>
+        <details id="html-editor">
+            <summary>HTML</summary>
+            <textarea name="html" id="html" oninput="editPreview()"></textarea>
+        </details>
+        <details id="css-editor">
+            <summary>CSS</summary>
+            <textarea name="css" id="css" oninput="editPreview()"></textarea>
+        </details>
+        <details id="js-editor">
+            <summary>Javascript</summary>
+            <textarea name="js" id="js" oninput="editPreview()"></textarea>
+        </details>
     </div>
     <div id="output">
         <h3>Preview</h3>

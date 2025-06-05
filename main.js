@@ -11,6 +11,12 @@ function consoleRender(args){
     consoleRenderer.appendChild(newNode);
 }
 
+function htmlFilter(value){
+    const test = document.createElement("div");
+    test.innerHTML = value;
+    return test.innerHTML===value;
+}
+
 function editPreview(){
     
     renderer.open();
@@ -20,7 +26,7 @@ function editPreview(){
             <style>${cssTextArea.value}</style>
         </head>
         <body>
-            ${htmlTextArea.value}
+            ${(htmlFilter(htmlTextArea.value)===true)? htmlTextArea.value : ""}
             <script>
                 console.log = (...args)=>{
                     window.parent.consoleRender(args);

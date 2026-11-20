@@ -25,7 +25,10 @@ la evidencia de la comprobación (comando, navegador o descripción).
 - [ ] Crear estructura js/ y mover la lógica existente.
 - [ ] Toolbar y layout de paneles.
 - [ ] Tema oscuro y responsive.
-- [ ] CodeMirror inicializado, con fallback y refresh al redimensionar.
+- [x] CodeMirror inicializado, con fallback y refresh al redimensionar.
+  Evidencia: 3 instancias 5.65.5 con `lineNumbers` y `styleActiveLine`;
+  página de prueba sin CDN mantiene textareas y preview; `resize` refresca
+  las 3 instancias.
 - [ ] srcdoc con escapado correcto; eliminar htmlFilter.
 - [ ] Puente postMessage con log/info/warn/error, onerror y unhandledrejection.
 - [ ] Consola segura con niveles, timestamp, contador, clear y autoscroll.

@@ -41,6 +41,8 @@ comportamiento inconsistente en algunos navegadores.
 ## Stack
 
 - HTML5, CSS3, vanilla JavaScript (ES modules).
+- Estilos propios con tokens de Material 3 (tema oscuro, superficies y
+  elevación), sin librería de componentes.
 - CodeMirror 5 (core + modos HTML/CSS/JS + tema oscuro) desde CDN.
 - No se usan frameworks ni build steps.
 

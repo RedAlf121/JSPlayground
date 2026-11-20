@@ -1,37 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Local Playground</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#141218">
+    <title>Playground</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css">
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/htmlmixed/htmlmixed.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/css/css.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/javascript/javascript.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/selection/active-line.min.js" defer></script>
     <script src="main.js" defer></script>
 </head>
 <body>
-    <div id="editor">
-        <details id="html-editor">
-            <summary>HTML</summary>
-            <textarea name="html" id="html" oninput="editPreview()"></textarea>
-        </details>
-        <details id="css-editor">
-            <summary>CSS</summary>
-            <textarea name="css" id="css" oninput="editPreview()"></textarea>
-        </details>
-        <details id="js-editor">
-            <summary>Javascript</summary>
-            <textarea name="js" id="js" oninput="editPreview()"></textarea>
-        </details>
-    </div>
-    <div id="output">
-        <h3>Preview</h3>
-        <iframe class="render" title="Preview"></iframe>
-        <h3>Console</h3>
-        <div class="console"></div>
-    </div>
+    <header class="top-app-bar">
+        <h1 class="top-app-bar__title">Playground</h1>
+        <p class="top-app-bar__subtitle">HTML · CSS · JavaScript</p>
+    </header>
+
+    <main class="workspace">
+        <div class="editors">
+            <section class="panel panel--html" aria-labelledby="html-heading">
+                <header class="panel__header">
+                    <h2 class="panel__title" id="html-heading">HTML</h2>
+                </header>
+                <label class="visually-hidden" for="html">Código HTML</label>
+                <textarea name="html" id="html" spellcheck="false" oninput="editPreview()"></textarea>
+            </section>
+
+            <section class="panel panel--css" aria-labelledby="css-heading">
+                <header class="panel__header">
+                    <h2 class="panel__title" id="css-heading">CSS</h2>
+                </header>
+                <label class="visually-hidden" for="css">Código CSS</label>
+                <textarea name="css" id="css" spellcheck="false" oninput="editPreview()"></textarea>
+            </section>
+
+            <section class="panel panel--js" aria-labelledby="js-heading">
+                <header class="panel__header">
+                    <h2 class="panel__title" id="js-heading">JavaScript</h2>
+                </header>
+                <label class="visually-hidden" for="js">Código JavaScript</label>
+                <textarea name="js" id="js" spellcheck="false" oninput="editPreview()"></textarea>
+            </section>
+        </div>
+
+        <div class="output">
+            <section class="panel panel--preview" aria-labelledby="preview-heading">
+                <header class="panel__header">
+                    <h2 class="panel__title" id="preview-heading">Vista previa</h2>
+                </header>
+                <iframe class="render" title="Vista previa del código"></iframe>
+            </section>
+
+            <section class="panel panel--console" aria-labelledby="console-heading">
+                <header class="panel__header">
+                    <h2 class="panel__title" id="console-heading">Consola</h2>
+                </header>
+                <div class="console" role="log" aria-live="polite"></div>
+            </section>
+        </div>
+    </main>
 </body>
 </html>

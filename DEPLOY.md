@@ -20,9 +20,25 @@ vercel link       # vincula la carpeta con un proyecto de Vercel
 ## Despliegues
 
 ```bash
-vercel            # despliegue de preview (URL temporal)
+vercel link       # vincula la carpeta con el proyecto (crea .vercel/)
+vercel            # despliegue de preview
 vercel --prod     # despliegue de producción
 ```
+
+Si no quieres vincular la carpeta, indica el proyecto en cada comando:
+
+```bash
+vercel deploy --project playground --prod
+```
+
+> El **primer** deployment de un proyecto nuevo siempre se asigna a
+> producción, aunque se pida preview. A partir del segundo ya se pueden
+> crear previews.
+
+## URLs del proyecto
+
+- Producción: <https://playground-kappa-ebon.vercel.app>
+- Proyecto en Vercel: <https://vercel.com/redalf121s-projects/playground>
 
 ## Configuración del repositorio
 

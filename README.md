@@ -1,7 +1,7 @@
 # Playground
 
 Editor web de HTML, CSS y JavaScript inspirado en CodePen. Renderiza el
-resultado dentro de un iframe con `srcdoc` y muestra la salida de consola.
+resultado dentro de un iframey muestra la salida de consola.
 Está construido sin framework con index.html, main.js y style.css.
 
 ## Demo rápida
@@ -21,8 +21,6 @@ y empieza a escribir. Los cambios aparecen al instante.
   ocupa el ancho completo.
 - **Persistencia en localStorage**: al recargar la página se recupera el
   último trabajo. El contenido también se guarda automáticamente cada 30 s.
-- **Auto-run** con debounce y botón Run (o Ctrl/Cmd + Enter).
-- **Reset** con confirmación para restaurar el contenido inicial.
 - **Sandbox** en el iframe (`allow-scripts allow-forms allow-modals`) para
   aislar el código del usuario.
 - **Accesibilidad**: labels, foco visible, respeto a
@@ -40,26 +38,11 @@ comportamiento inconsistente en algunos navegadores.
 
 ## Stack
 
-- HTML5, CSS3, vanilla JavaScript (ES modules).
+- HTML, CSS, vanilla JavaScript (ES modules).
 - Estilos propios con tokens de Material 3 (tema oscuro, superficies y
   elevación), sin librería de componentes.
 - CodeMirror 5 (core + modos HTML/CSS/JS + tema oscuro) desde CDN.
 - No se usan frameworks ni build steps.
-
-## Seguridad del sandbox
-
-El iframe carga el código del usuario con:
-
-```
-sandbox="allow-scripts allow-forms allow-modals"
-```
-
-Esto evita que el código acceda a `window.parent`, `window.top` o al DOM
-del padre, excepto lo necesario para enviar mensajes a la consola. El
-script principal valida siempre `event.source === iframe.contentWindow`
-antes de procesar cualquier mensaje.
-
-## Autor / portafolio
 
 Proyecto de portafolio para demostrar manipulación del DOM, aislamiento en
 iframe, actualización en vivo y persistencia local.

@@ -26,16 +26,6 @@ y empieza a escribir. Los cambios aparecen al instante.
 - **Accesibilidad**: labels, foco visible, respeto a
   `prefers-reduced-motion`.
 
-## Cómo ejecutar
-
-```bash
-python -m http.server 8000
-```
-
-Luego abre <http://localhost:8000> en tu navegador. El proyecto está
-diseñado para servirse por HTTP porque `localStorage` bajo `file://` tiene
-comportamiento inconsistente en algunos navegadores.
-
 ## Stack
 
 - HTML, CSS, vanilla JavaScript (ES modules).
